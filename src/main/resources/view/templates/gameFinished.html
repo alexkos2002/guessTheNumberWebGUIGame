@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+      * {
+        padding: 0 0 0 0;
+      }
+      h2 {
+        text-align: center;
+      }
+      a {
+        text-decoration: none;
+      }
+      .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      .col5_10 {
+        width: 50%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .infoContainer{
+          font-size: 1.5rem;
+      }
+      .submitButton {
+        margin-top: 2vh;
+        padding: 1vh 0.5vw 1vh 0.5vw;
+        border-radius: 8px;
+        background-color: #5566ff;
+        color: white;
+        font-size: 1.5rem;
+      }
+      .successMessage {
+        color: green;
+        font-weight: 550;
+      }
+    </style>
+    <meta charset="UTF-8">
+    <title>Guess The Number Game</title>
+</head>
+<body>
+<div class="row">
+  <div class="col5_10">
+    <div class="row">
+      <h2 class="successMessage">Congratulations!!!</h2>
+    </div>
+    <div class="row infoContainer">
+      <p class="successMessage" style="text-align: center" th:if="${message != null}" th:text="${message}"/>
+    </div>
+    <div class="row infoContainer">
+      <p>Do you want to try again?</p>
+    </div>
+    <div class="row">
+      <div class="submitButton">
+        <a href="/game" style="text-decoration: none; color: white">START THE NEW GAME</a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
